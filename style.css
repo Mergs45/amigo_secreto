@@ -1,0 +1,167 @@
+/* Estilos generales y de fuente */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* Contenedor principal */
+main {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    padding: 2rem; 
+    width: 100%;
+    max-width: 48rem; 
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Media query para pantallas más grandes (smartphones y desktops) */
+@media (min-width: 768px) {
+    section {
+        flex-direction: row;
+    }
+    section > div {
+        width: 50%;
+    }
+    h1 {
+        text-align: left;
+    }
+}
+
+
+/* Títulos */
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+/* Formularios y botones */
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px #bfdbfe;
+}
+
+button {
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+/* Estilos específicos para cada botón */
+#agregar-btn {
+    background-color: #2563eb;
+}
+#agregar-btn:hover {
+    background-color: #1d4ed8;
+}
+
+#sortear-btn {
+    background-color: #16a34a;
+    flex-grow: 1;
+}
+#sortear-btn:hover {
+    background-color: #15803d;
+}
+
+#reiniciar-btn {
+    background-color: #dc2626;
+    flex-grow: 1;
+}
+#reiniciar-btn:hover {
+    background-color: #b91c1c;
+}
+
+
+/* Contenedores de botones y inputs */
+section > div > div:nth-of-type(1) > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+section > div > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Media query para alinear botones en pantallas más grandes */
+@media (min-width: 640px) {
+    section > div > div:nth-of-type(1) > div,
+    section > div > div:nth-of-type(2) {
+        flex-direction: row;
+    }
+     button, input[type="text"] {
+        width: auto;
+    }
+}
+
+
+/* Listas y resultados */
+#lista-amigos-container {
+    margin-bottom: 1rem;
+}
+
+#lista-amigos {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    color: #4b5563;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-color: #e5e7eb;
+}
+
+#resultado-sorteo {
+    color: #1f2937;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
